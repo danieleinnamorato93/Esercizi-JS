@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>ForEach</h1>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem quas
+      eos, quia, consequuntur inventore ut maiores minus vero dolorum eius
+      magnam animi at, iusto exercitationem voluptates. Harum sit odio saepe.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem quas
+      eos, quia, consequuntur inventore ut maiores minus vero dolorum eius
+      magnam animi at, iusto exercitationem voluptates. Harum sit odio saepe.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem quas
+      eos, quia, consequuntur inventore ut maiores minus vero dolorum eius
+      magnam animi at, iusto exercitationem voluptates. Harum sit odio saepe.
+    </p>
+    <script>
+      //prendi tutte le <p> e mettile in una variabile
+      let paragrafi = document.querySelectorAll("p");
+      paragrafi.forEach((par, index) => {
+        let nuovoParagrafo = par.textContent + "Fine paragrafo";
+        par.textContent = index + ":" + nuovoParagrafo;
+      });
+    </script>
+  </body>
+</html>
