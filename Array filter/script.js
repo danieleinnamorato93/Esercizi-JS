@@ -22,6 +22,6 @@ const persone = [
 ];
 
 console.log(persone);
-
+//! metto in una variabile il filtro che cicla su persone, da un nome al singolo elemento (persona) e filtra solo i maggiorenni
 let adulti = persone.filter((persona) => persona.anni > 18);
 console.table(adulti);
