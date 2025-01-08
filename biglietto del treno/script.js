@@ -4,8 +4,8 @@ const pricePerKm = 0.21;
 
 //? Fase di raccolta dati, chiedo l'età all'utente e i km
 
-let age = parseInt(prompt("Quanti anni hai?", "17"));
-let kms = parseInt(prompt("Quanti kilometri vuoi percorrere?", "100"));
+const age = parseInt(prompt("Quanti anni hai?", "17"));
+const kms = parseInt(prompt("Quanti kilometri vuoi percorrere?", "100"));
 
 const ticketPrice = kms * pricePerKm;
 
