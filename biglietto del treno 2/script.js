@@ -1,36 +1,16 @@
-//?recupero elementi dal Dom
-const nameInput = document.querySelector("#name");
-const kmsInput = document.querySelector("#kms");
-const ageSelect = document.querySelector("#age");
-const form = document.querySelector("#ticket");
-const paragraphElement = document.querySelector("#paragraph");
+//!Raccolgo elementi interesse del DOM
+//?Faccio reagire il click al bottone di conferma
+//*Recupero i valori del form
+//!Validazione
+//!Calcolo del prezzo in base ai km
+//!Verifico se applicare lo sconto
+//!Arrotondo a 2 decimali
+//!Svuoto i campi del form
+//!Preparo i valori corretti nel biglietto
+//!Mostro il biglietto
 
-const pricePerKm = 0.21;
-
-// Gestione Eventi: recupero valore input
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const name = nameInput.value;
-  const kms = parseInt(kmsInput.value, 10);
-  const selectedAgeText = ageSelect.options[ageSelect.selectedIndex].text;
-
-  const basePrice = kms * pricePerKm;
-  let finalPrice = basePrice;
-
-  if (ageSelect.value === "3") {
-    finalPrice *= 0.6;
-  } else if (ageSelect.value === "1") {
-    finalPrice *= 0.8;
-  }
-
-  finalPrice = finalPrice.toFixed(2);
-
-  // Output sulla pagina
-  paragraphElement.innerHTML = `
-        <strong>Nome e Cognome:</strong> ${name}<br>
-        <strong>Kilometri da percorrere:</strong> ${kms}<br>
-        <strong>Età:</strong> ${selectedAgeText}<br>
-        <strong>Prezzo del biglietto:</strong> €${finalPrice}
-    `;
-});
+//?Preparazione
+const nameField = document.getElementById("name");
+const kmsField = document.getElementById("kms");
+const ageField = document.getElementById("age");
+const confirmButton = document.getElementById("confirm-button");
