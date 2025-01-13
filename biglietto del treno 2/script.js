@@ -10,6 +10,7 @@
 //!Mostro il biglietto
 
 //?Fase di preparazione:
+const form = document.querySelector("form");
 const nameField = document.getElementById("name");
 const kmsField = document.getElementById("kms");
 const ageField = document.getElementById("age");
@@ -64,4 +65,9 @@ confirmButton.addEventListener("click", function (e) {
   //!Mostro il biglietto
 
   ticketSection.classList.remove("d-none");
+
+  //*Pulizia form
+
+  form.reset();
+  form.classList.add("d-none");
 });
